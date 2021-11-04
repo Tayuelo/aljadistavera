@@ -1,12 +1,209 @@
-.profile-photo {
-    height: 300px;
-    width: 300px;
-    border-radius: 50%;
+.profilePhoto {
+  height: 300px;
+  width: 300px;
+  border-radius: 50%;
 }
 
-.background {
-    height: 100vh;
+.btn-outline-warning {
+  color: black;
+  background: #b14c48;
+  border-color: #da4a46;
+  border-radius: 20px;
+
+  &:hover {
+    color: black;
+    background: #da4a46;
+    position: relative;
+    animation: salto-btn;
+    animation-duration: 1s;
+  }
+}
+
+@keyframes salto-btn {
+  0% {
+    top: 0px;
+  }
+  50% {
+    top: -10px;
+  }
+  100% {
+    top: 0px;
+  }
+}
+
+@keyframes intro-animation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes hr-animation {
+  0% {
     width: 100%;
-    background-color: #12181b;
-    background-size: cover;
+  }
+  100% {
+    width: 20%;
+  }
+}
+
+.containter {
+  box-sizing: border-box;
+  position: relative;
+}
+
+.landingSection {
+  display: flex;
+  padding: 8rem;
+  justify-content: center;
+  height: "70vh";
+  background-color: #000000;
+}
+
+.menuSection {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  padding: 20px;
+  padding: 20px 20em;
+}
+
+.menuSection .serviceBox {
+  position: relative;
+  width: 350px;
+  height: 280px;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #cccccc;
+}
+
+.menuSection .serviceBox .icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--i);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menuSection .serviceBox:hover .icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  top: 30px;
+  left: calc(50% - 40px);
+  background: var(--i);
+}
+
+@mixin planet {
+  width: 80px;
+  height: 80px;
+  top: 40px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-size: 200px 100%;
+  box-shadow: inset 0px 0px 1.5px #fdf29e, inset 8px 0px 20px #000;
+  position: absolute;
+  animation: rotate 5s infinite linear;
+  transition: visibility 0.5s, opacity 0.5s linear;
+  visibility: hidden;
+  opacity: 0;
+  background-image: url(/assets/images/earth.jpeg);
+}
+
+.menuSection .serviceBox .icon .earth {
+  @include planet;
+  background-image: url("/assets/images/earth.jpeg");
+}
+
+.menuSection .serviceBox:hover .icon .earth {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuSection .serviceBox .icon .mars {
+  @include planet;
+  background-image: url("/assets/images/mars.png");
+}
+
+.menuSection .serviceBox:hover .icon .mars {
+  visibility: visible;
+  opacity: 1;
+}
+
+.menuSection .serviceBox .icon .jupiter {
+  @include planet;
+  background-image: url("/assets/images/jupiter.jpeg");
+}
+
+.menuSection .serviceBox:hover .icon .jupiter {
+  visibility: visible;
+  opacity: 1;
+}
+
+@keyframes rotate {
+  0% {
+    background-position-x: 0px;
+  }
+  100% {
+    background-position-x: 200px;
+  }
+}
+
+// .menuSection .serviceBox:hover .icon .earth {
+//   width: 80px;
+//   height: 80px;
+//   top: 50%;
+//   left: 50%;
+//   background-repeat: no-repeat;
+//   border-radius: 50%;
+//   background-size: cover;
+//   display: block;
+// }
+
+.about-section {
+  background-color: var(--indianred);
+}
+
+.timeline-section {
+  width: 100%;
+  background-color: lightgray;
+}
+
+h1 {
+  color: white;
+}
+
+.introductionConteiner {
+  text-align: center;
+  animation-name: intro-animation;
+  animation-duration: 2s;
+  opacity: 1;
+}
+
+.introduction {
+  margin-top: 20px;
+}
+
+p {
+  color: white;
+}
+
+hr {
+  border: 1.5px solid #ededed;
+  color: #ededed;
+  opacity: 1;
+  width: 20%;
+  animation-name: hr-animation;
+  animation-duration: 2.5s;
 }

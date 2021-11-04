@@ -1,0 +1,9 @@
+<div class="row container" [ngClass]="data ? data.pos : ''">
+  <div class="col-sm content">
+    <h2>{{ data?.year }}</h2>
+    <span *ngFor="let chip of data?.tags" class="badge" [style.background-color]="skillsWithColors[chip]">{{ chip | titlecase }}</span>
+    <p>
+      {{ data?.description }}
+    </p>
+  </div>
+</div>

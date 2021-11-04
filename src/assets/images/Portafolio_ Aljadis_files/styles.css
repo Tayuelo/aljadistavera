@@ -1,0 +1,33 @@
+@import url(https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap);
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --header-height: 3.8rem;
+  --landing-section-height: 100vh;
+  --header-height-hover: 3rem;
+  --bg-body: #2a9d8f;
+  --indianred: #DB4A45;
+  --lightgray: lightgray;
+  --lightskyblue: #9ec6d1;
+  --darkorchid: #ba2cd2;
+  --slateblue: #7848bd;
+  --crimson: #c4002f;
+  --dodgerblue: #3780ff;
+  --bg-timeline-item: #EDEDED;
+}
+body {
+  background: var(--bg-body);
+  font-family: "Ubuntu", sans-serif;
+  margin: 0;
+}
+.header-scrolling {
+  background-color: var(--crimson) !important;
+  box-shadow: 4px 0 10px -3px #010101;
+}
+p {
+  margin: 0px;
+}
+h1, h2, h3, h4, h5 {
+  margin: 0;
+}
+
+/*# sourceMappingURL=styles.css.map*/
