@@ -1,1 +1,31 @@
-<p>bio-page works!</p>
+<div class="bio-container">
+    <h1 class="title">
+        Bio
+    </h1>
+    <br>
+    <br>
+    <div>
+        <p style="width: 45rem;">
+            Born in the little San Andrés Island, at the Caribbean, I’m a Systems Engineer graduated from the Adventist
+            University Corporation, UNAC.
+            Passionate about web and software development, ready to work with positive thinking people.
+            I’m a son and a brother, interested in the Front End spectrum and in making dreams come true.
+        </p>
+    </div>
+    <br>
+    <br>
+    <div class="collabs" id="collabs">
+        <h1>
+            Have worked with:
+        </h1>
+        <div id="brand__list" class="brand__list">
+            <div class="brand__row" *ngFor="let brand of brands">
+                <img [src]="brand.logo" class="brand__logo">
+                <div class="brand__info">
+                    <h4>{{ brand.name }}</h4>
+                    <p>{{ brand.summary }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

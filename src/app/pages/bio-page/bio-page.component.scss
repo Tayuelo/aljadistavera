@@ -1,0 +1,69 @@
+.bio-container {
+    margin: 50px 40px;
+}
+
+.title {
+    font-size: 5em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.brand__list {
+    height: 30rem;
+    overflow: scroll;
+    padding: 25px 0px;
+    position: relative;
+}
+
+.brand__row {
+    display: flex;
+    position: relative;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.brand__logo {
+    height: 150px;
+    width: 200px;
+    background-color: #FFFFFF;
+}
+
+.brand__info {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 20px;
+}
+
+.collabs {
+    position: relative;
+
+    &::after {
+        content: 'Scroll to see more!';
+        position: absolute;
+        bottom: 0px;
+        right: 10em;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    &.no-collabs-after::after {
+        display: none !important;
+    }
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
