@@ -14,5 +14,10 @@
 }
 
 .card-section {
-    
+    min-height: 350px;
+    display: flex;
+}
+
+app-card {
+    margin-right: 20px;
 }

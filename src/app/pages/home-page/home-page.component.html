@@ -2,7 +2,7 @@
     <h1 class="title">
         Hi, I'm Aljadis
     </h1>
-    <h5 class="subtitle">Web and mobile developer located in Colombia.</h5>
+    <h5 class="subtitle">Systems Engineer / Front End Developer</h5>
 
     <br>
     <br>
@@ -13,9 +13,13 @@
     <h1>
         Featured
     </h1>
+    <p>
+        In this section you can find some of my guides and tutorials, articles and the like.
+        I'll do my best in trying to bring quality content every week, feel free to send me your feedback.
+    </p>
     <br>
     <br>
     <div class="card-section">
-
+        <app-card *ngFor="let post of featuredPosts" [cardInfo]="post"></app-card>
     </div>
 </div>
