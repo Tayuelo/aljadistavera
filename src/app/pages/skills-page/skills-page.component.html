@@ -1,1 +1,39 @@
-<p>skills-page works!</p>
+<div class="skills-container">
+    <h1 class="title">
+        Skills & <br>
+        Experience
+    </h1>
+    <br>
+    <br>
+    <div>
+        <p style="width: 45rem;">
+            My journey began in the middle of 2019 when I was about to graduate from my Systems Engineer degree at the
+            Adventist University Corporation - UNAC. I was looking for my first job and was hired by an amazing company
+            called <a class="sofka__link" href="https://www.sofka.com.co" target="_blank">Sofka Technologies.</a> <br> <br>
+
+            Since then, my work has been focused on planning, developing and testing business solutions or features with
+            primarily web technologies, particularly on the Front End side.
+        </p>
+    </div>
+    <br>
+    <div class="toolkit" id="toolkit">
+        <h1>
+            Toolkit
+        </h1>
+        <div style="display: flex; flex-direction: column;">
+            <span>Can perform with limited supervision.</span>
+            <span>Can perform without supervision.</span>
+            <span>Can teach others</span>
+        </div>
+        <br>
+        <ul id="list" class="list">
+            <li class="skill__card" *ngFor="let skill of skills">
+                <div class="skill__img">
+                    <img [src]="skill.logo" alt="Skill logo">
+                </div>
+                <h5 class="skill__name">{{ skill.name }}</h5>
+                <span class="skill__rate">{{ skill.rate }}</span>
+            </li>
+        </ul>
+    </div>
+</div>
