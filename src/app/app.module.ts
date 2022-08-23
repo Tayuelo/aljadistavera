@@ -20,7 +20,7 @@ import { TagComponent } from './components/tag/tag.component';
     ProjectsPageComponent,
     SidebarComponent,
     CardComponent,
-    TagComponent
+    TagComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,0 +1,24 @@
+.projects-container {
+    margin: 50px 40px;
+}
+
+.title {
+    font-size: 5em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.expandable-cards {
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    max-height: 36em;
+    overflow: auto;
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.expandable-cards::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+

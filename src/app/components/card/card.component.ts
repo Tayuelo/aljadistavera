@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { ICard } from 'src/app/models';
+import { FeaturedDto, ICard, ProjectsDto } from 'src/app/models';
 
 @Component({
   selector: 'app-card',
@@ -8,9 +8,10 @@ import { ICard } from 'src/app/models';
 })
 export class CardComponent implements OnInit {
 
-  @Input() cardInfo!: ICard;
+  @Input() cardInfo!: { isSmall?: boolean, isComplex?: boolean, data: any };
 
-  constructor() { }
+  constructor() {
+  }
 
   ngOnInit(): void { }
 

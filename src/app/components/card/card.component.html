@@ -1,12 +1,39 @@
-<div class="card" style="width: 18rem;" (click)="goTo()">
-    <img loading="lazy" [src]="cardInfo.img" class="card-img-top" alt="Post img">
+<div *ngIf="cardInfo.isSmall" style="width: 18rem;" class="card" (click)="goTo()">
+    <img loading="lazy" [src]="cardInfo.data.img" class="card-img-top" alt="Post img">
     <hr>
     <div class="card-body">
-        <h5 class="card-title">Card title</h5>
+        <h5 class="title_sm">Card title</h5>
         <div class="tags">
-            <app-tag *ngFor="let tag of cardInfo.tags">{{ tag }}</app-tag>
+            <app-tag *ngFor="let tag of cardInfo.data.tags">{{ tag }}</app-tag>
         </div>
         <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
             content.</p>
+    </div>
+</div>
+
+<div *ngIf="cardInfo.isComplex" id="file" class="file">
+    <div id="file__content" class="file__content">
+        <div class="logo-wrapper">
+            <img class="logo" [src]="cardInfo.data.img" alt="Project logo">
+        </div>
+        <div class="info">
+            <h1 class="project-name">
+                {{ cardInfo.data.name }}
+            </h1>
+            <span class="company-name">{{ cardInfo.data.company }}</span>
+            <br>
+            <p class="project-description">{{ cardInfo.data.description }}</p>
+            <div style="display: flex; font-weight: 300;">
+                Duration: &nbsp;
+                <span style="font-weight: 100;">{{ cardInfo.data.duration }}</span>
+            </div>
+            Stack:
+            <div class="tags">
+                <app-tag *ngFor="let tag of cardInfo.data.stack">{{ tag }}</app-tag>
+            </div>
+        </div>
+    </div>
+    <div id="file__footer" class="file__footer">
+        <span>{{ cardInfo.data.name }}</span>
     </div>
 </div>

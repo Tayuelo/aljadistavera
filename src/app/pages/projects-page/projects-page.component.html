@@ -1,1 +1,22 @@
-<p>projects-page works!</p>
+<div class="projects-container">
+    <h1 class="title">
+        Projects
+    </h1>
+    <br>
+    <br>
+    <div>
+        <p style="width: 45rem;">
+            Here I want to show you a summary of some of the projects I've had participation.
+        </p>
+    </div>
+    <br>
+    <div class="filer" id="filer">
+        <h1>
+            Filer
+        </h1>
+        <br>
+        <div class="expandable-cards">
+            <app-card *ngFor="let project of projects" [cardInfo]="{ isComplex: true, data: project }"></app-card>
+        </div>
+    </div>
+</div>
