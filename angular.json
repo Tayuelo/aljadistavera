@@ -72,7 +72,8 @@
               "browserTarget": "aljadistavera:build:production"
             },
             "development": {
-              "browserTarget": "aljadistavera:build:development"
+              "browserTarget": "aljadistavera:build:development",
+              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"

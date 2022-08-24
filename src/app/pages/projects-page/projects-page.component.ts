@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ProjectsDto } from 'src/app/models';
+import { ProjectsService } from '../../services/projects.service';
 
 @Component({
   selector: 'app-projects-page',
@@ -8,69 +9,14 @@ import { ProjectsDto } from 'src/app/models';
 })
 export class ProjectsPageComponent implements OnInit {
 
+  public projects: ProjectsDto[] = [];
 
-  public projects: ProjectsDto[] = [
-    {
-      name: 'Yappy',
-      description: 'My journey begins  in the middle of 2019 when I was about to graduate from my Systems Engineer degree at the  Adventist University Corporation - UNAC. I was looking for my first job and was hired by an amazing company called Sofka Technologies.',
-      img: 'assets/avatar.png',
-      stack: [
-        'Angular',
-        'React',
-        'Node.js',
-        'Docker'
-      ],
-      id: '',
-      company: 'Banco General de Panamá',
-      duration: '3 months'
-    },
-    {
-      name: 'Yappy',
-      description: 'My journey begins  in the middle of 2019 when I was about to graduate from my Systems Engineer degree at the  Adventist University Corporation - UNAC. I was looking for my first job and was hired by an amazing company called Sofka Technologies.',
-      img: 'assets/avatar.png',
-      stack: [
-        'Angular',
-        'React',
-        'Node.js',
-        'Docker'
-      ],
-      id: '',
-      company: 'Banco General de Panamá',
-      duration: '3 months'
-    },
-    {
-      name: 'Yappy',
-      description: 'My journey begins  in the middle of 2019 when I was about to graduate from my Systems Engineer degree at the  Adventist University Corporation - UNAC. I was looking for my first job and was hired by an amazing company called Sofka Technologies.',
-      img: 'assets/avatar.png',
-      stack: [
-        'Angular',
-        'React',
-        'Node.js',
-        'Docker'
-      ],
-      id: '',
-      company: 'Banco General de Panamá',
-      duration: '3 months'
-    },
-    {
-      name: 'Yappy',
-      description: 'My journey begins  in the middle of 2019 when I was about to graduate from my Systems Engineer degree at the  Adventist University Corporation - UNAC. I was looking for my first job and was hired by an amazing company called Sofka Technologies.',
-      img: 'assets/avatar.png',
-      stack: [
-        'Angular',
-        'React',
-        'Node.js',
-        'Docker'
-      ],
-      id: '',
-      company: 'Banco General de Panamá',
-      duration: '3 months'
-    }
-  ]
-
-  constructor() { }
+  constructor(private projectsService: ProjectsService) { }
 
   ngOnInit(): void {
+    this.projectsService.getProjects().subscribe(data => {
+      this.projects = data;
+    }).unsubscribe();
+    console.log(this.projects);
   }
-
 }
