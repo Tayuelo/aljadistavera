@@ -1,5 +1,42 @@
 .bio-container {
-    margin: 50px 40px;
+    max-height: 100vh;
+    overflow: auto;
+    padding-top: 20px;
+    padding-left: 40px;
+
+    /**
+    &::after {
+        content: 'Scroll to see more!';
+        position: absolute;
+        bottom: 2em;
+        right: 10em;
+        animation-name: bounce;
+        animation-duration: 1s;
+        animation-iteration-count: infinite;
+    }
+
+    &.no-bio-container-after::after {
+        display: none !important;
+    }
+    */
+}
+
+@keyframes bounce {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(5px);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.bio-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .title {
@@ -9,10 +46,12 @@
 }
 
 .brand__list {
-    height: 30rem;
-    overflow: scroll;
     padding: 25px 0px;
     position: relative;
+}
+
+.brand__list::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .brand__row {
@@ -39,31 +78,6 @@
 .collabs {
     position: relative;
 
-    &::after {
-        content: 'Scroll to see more!';
-        position: absolute;
-        bottom: 0px;
-        right: 10em;
-        animation-name: bounce;
-        animation-duration: 1s;
-        animation-iteration-count: infinite;
-    }
 
-    &.no-collabs-after::after {
-        display: none !important;
-    }
 }
 
-@keyframes bounce {
-    0% {
-        transform: translateY(0);
-    }
-
-    50% {
-        transform: translateY(5px);
-    }
-
-    100% {
-        transform: translateY(0);
-    }
-}

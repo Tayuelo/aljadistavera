@@ -1,5 +1,12 @@
 .projects-container {
-    margin: 50px 40px;
+    max-height: 100vh;
+    overflow: auto;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.projects-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .title {

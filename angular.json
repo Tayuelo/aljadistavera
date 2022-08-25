@@ -73,7 +73,6 @@
             },
             "development": {
               "browserTarget": "aljadistavera:build:development",
-              "proxyConfig": "src/proxy.conf.json"
             }
           },
           "defaultConfiguration": "development"
@@ -104,5 +103,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

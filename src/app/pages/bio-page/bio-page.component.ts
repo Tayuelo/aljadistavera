@@ -36,17 +36,5 @@ export class BioPageComponent implements OnInit {
 
   constructor() { }
 
-
-
-  ngOnInit(): void {
-    const collabs = document.getElementById('collabs');
-    const brand_list = document.getElementById('brand__list');
-    brand_list?.addEventListener("scroll", () => {
-      if (brand_list.scrollTop === 0) {
-        collabs?.classList.toggle('no-collabs-after', false);
-      } else {
-        collabs?.classList.toggle('no-collabs-after', true);
-      }
-    });
-  }
+  ngOnInit(): void {}
 }

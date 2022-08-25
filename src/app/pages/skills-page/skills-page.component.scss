@@ -1,5 +1,12 @@
 .skills-container {
-    margin: 40px 40px;
+    max-height: 100vh;
+    overflow: auto;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.skills-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
 }
 
 .title {

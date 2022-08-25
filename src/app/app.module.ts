@@ -11,6 +11,7 @@ import { ProjectsPageComponent } from './pages/projects-page/projects-page.compo
 import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardComponent } from './components/card/card.component';
 import { TagComponent } from './components/tag/tag.component';
+import { ProjectsService } from './services/projects.service';
 
 @NgModule({
   declarations: [
@@ -28,7 +29,6 @@ import { TagComponent } from './components/tag/tag.component';
     AppRoutingModule,
     HttpClientModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

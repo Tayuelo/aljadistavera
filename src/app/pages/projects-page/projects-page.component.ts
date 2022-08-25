@@ -5,7 +5,9 @@ import { ProjectsService } from '../../services/projects.service';
 @Component({
   selector: 'app-projects-page',
   templateUrl: './projects-page.component.html',
-  styleUrls: ['./projects-page.component.scss']
+  styleUrls: ['./projects-page.component.scss'],
+  providers: [ProjectsService]
+
 })
 export class ProjectsPageComponent implements OnInit {
 
@@ -13,10 +15,7 @@ export class ProjectsPageComponent implements OnInit {
 
   constructor(private projectsService: ProjectsService) { }
 
-  ngOnInit(): void {
-    this.projectsService.getProjects().subscribe(data => {
-      this.projects = data;
-    }).unsubscribe();
-    console.log(this.projects);
+  async ngOnInit() {
+    this.projects = await this.projectsService.getProjects();
   }
 }
