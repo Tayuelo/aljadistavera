@@ -1,0 +1,37 @@
+img {
+  max-height: 165px;
+}
+
+.card {
+  width: 20rem !important;
+  background-color: rgb(71, 78, 95, 100%);
+  border: none;
+  cursor: pointer;
+}
+
+.card-body {
+  padding-bottom: 5px;
+}
+
+.card-text {
+  font-weight: 200;
+}
+
+hr {
+  margin: 0;
+  color: black;
+}
+
+.tags {
+  display: flex;
+  justify-content: space-between;
+  width: fit-content;
+  color: black;
+  margin-top: 5px;
+}
+
+.title_sm {
+  font-size: 1.25em;
+  font-weight: 300;
+  margin: 0;
+}

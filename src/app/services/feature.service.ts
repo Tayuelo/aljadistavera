@@ -3,12 +3,12 @@ import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
 
 @Injectable()
-export class ProjectsService {
+export class FeatureService {
   constructor(private http: HttpClient) {}
 
-  getProjects(): Promise<any> {
+  getFeatures(): Promise<any> {
     return firstValueFrom(
-      this.http.get<any>('http://localhost:3000/api/projects')
+      this.http.get<any>('http://localhost:3000/api/features')
     );
   }
 }

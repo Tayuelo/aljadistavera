@@ -1,0 +1,31 @@
+.contact-container {
+    max-height: 100vh;
+    overflow: auto;
+    padding-top: 20px;
+    padding-left: 40px;
+}
+
+.contact-container::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+.title {
+    font-size: 5em;
+    color: #FFFFFF;
+    margin: 0;
+}
+
+.contact__form {
+    width: 400px;
+}
+
+.btn {
+    width: 100%;
+}
+
+.form-control {
+    border-radius: 0px;
+    background-color: unset;
+    resize: none;
+    color: white;
+}

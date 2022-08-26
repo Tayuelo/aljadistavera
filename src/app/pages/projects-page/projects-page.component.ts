@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { ProjectsDto } from 'src/app/models';
+import { ProjectsDto } from 'src/app/models/project.model';
 import { ProjectsService } from '../../services/projects.service';
 
 @Component({
@@ -7,7 +7,6 @@ import { ProjectsService } from '../../services/projects.service';
   templateUrl: './projects-page.component.html',
   styleUrls: ['./projects-page.component.scss'],
   providers: [ProjectsService]
-
 })
 export class ProjectsPageComponent implements OnInit {
 

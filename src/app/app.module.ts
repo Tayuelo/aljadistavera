@@ -12,6 +12,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
 import { CardComponent } from './components/card/card.component';
 import { TagComponent } from './components/tag/tag.component';
 import { ProjectsService } from './services/projects.service';
+import { ContactPageComponent } from './pages/contact-page/contact-page.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -23,11 +25,14 @@ import { ProjectsService } from './services/projects.service';
     SidebarComponent,
     CardComponent,
     TagComponent,
+    ContactPageComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
   ],
   bootstrap: [AppComponent]
 })

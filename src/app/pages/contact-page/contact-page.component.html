@@ -1,0 +1,28 @@
+<div id="contact-container" class="contact-container">
+    <h1 class="title">
+        Contact
+    </h1>
+    <br>
+    <br>
+    <div>
+        <p style="width: 45rem;">
+            Please leave a message if you want to reach out, and I’ll be in contact with you ASAP :)
+        </p>
+        <br>
+        <form [formGroup]="contactForm" class="contact__form">
+            <label for="email">Email</label>
+            <input formControlName="email" type="email" class="form-control" id="email" placeholder="you@domain.com">
+            <br>
+            
+            <label for="subject">Subject</label>
+            <input formControlName="subject" type="subject" class="form-control" id="subject">
+            <br>
+
+            <label for="message" class="form-label">Message</label>
+            <textarea formControlName="message" class="form-control" id="message" rows="3"></textarea>
+            <br>
+
+            <button type="button" class="btn btn-warning" (click)="sayHello()">Say hello!</button>
+        </form>
+    </div>
+</div>

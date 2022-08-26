@@ -1,41 +1,20 @@
 import { Component, OnInit } from '@angular/core';
-import { FeaturedDto, ICard } from 'src/app/models';
+import { FeaturedDto } from 'src/app/models/feature.model';
+import { FeatureService } from 'src/app/services/feature.service';
 
 @Component({
   selector: 'app-home-page',
   templateUrl: './home-page.component.html',
-  styleUrls: ['./home-page.component.scss']
+  styleUrls: ['./home-page.component.scss'],
+  providers: [FeatureService]
 })
 export class HomePageComponent implements OnInit {
 
-  public featuredPosts: FeaturedDto[] = [
-    {
-      id: '',
-      title: 'Amazing vs extensions you need to know about',
-      description: 'Some description here',
-      img: 'assets/engineering_1.jpeg',
-      tags: ['AI', 'JavaScript', 'express'],
-      readDuration: ''
-    },
-    {
-      id: '',
-      title: 'Amazing vs extensions you need to know about',
-      description: 'Some description here',
-      img: 'assets/engineering_2.jpeg',
-      tags: ['AI', 'JavaScript', 'express'],
-      readDuration: ''
-    },
-    {
-      id: '',
-      title: 'Amazing vs extensions you need to know about',
-      description: 'Some description here',
-      img: 'assets/engineering_3.png',
-      tags: ['AI', 'JavaScript', 'express'],
-      readDuration: ''
-    }
-  ];
+  public featured: FeaturedDto[] = [];
 
-  constructor() { }
+  constructor(private featureService: FeatureService) { }
 
-  ngOnInit(): void { }
+  async ngOnInit() {
+    this.featured = await this.featureService.getFeatures();
+  }
 }
