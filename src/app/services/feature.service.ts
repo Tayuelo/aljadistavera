@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { firstValueFrom } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 @Injectable()
 export class FeatureService {
@@ -8,7 +9,7 @@ export class FeatureService {
 
   getFeatures(): Promise<any> {
     return firstValueFrom(
-      this.http.get<any>('http://localhost:3000/api/features')
+      this.http.get<any>(`${ environment.apiUrl }/api/features`)
     );
   }
 }
