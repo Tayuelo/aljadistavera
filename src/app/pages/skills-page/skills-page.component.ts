@@ -9,32 +9,32 @@ export class SkillsPageComponent implements OnInit {
 
   public skills = [
     {
-      logo: 'static/angular_logo.png',
+      logo: 'assets/angular_logo.png',
       name: 'Angular',
       rate: '100%'
     },
     {
-      logo: 'static/nodejs_logo.png',
+      logo: 'assets/nodejs_logo.png',
       name: 'Node.js',
       rate: '100%'
     },
     {
-      logo: 'static/ionic_logo.png',
+      logo: 'assets/ionic_logo.png',
       name: 'Ionic Framework',
       rate: '100%'
     },
     {
-      logo: 'static/html_logo.png',
+      logo: 'assets/html_logo.png',
       name: 'HTML',
       rate: '100%'
     },
     {
-      logo: 'static/css_logo.png',
+      logo: 'assets/css_logo.png',
       name: 'CSS',
       rate: '100%'
     },
     {
-      logo: 'static/js_logo.png',
+      logo: 'assets/js_logo.png',
       name: 'JavaScript',
       rate: '100%'
     },
