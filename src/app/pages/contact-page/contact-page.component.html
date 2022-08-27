@@ -22,7 +22,7 @@
             <textarea formControlName="message" class="form-control" id="message" rows="3"></textarea>
             <br>
 
-            <button type="button" class="btn btn-warning" (click)="sayHello()">Say hello!</button>
+            <button type="button" class="btn btn-warning" (click)="sayHello()">{{ loading ? 'Sending...' : 'Say hello!' }}</button>
         </form>
     </div>
 </div>

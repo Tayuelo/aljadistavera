@@ -9,6 +9,6 @@ export class MailService {
     constructor(private http: HttpClient) {}
 
     public send(value: any): Promise<any> {
-        return firstValueFrom(this.http.post<any>(`${ environment.apiUrl }/api/email/send`, value));
+        return firstValueFrom(this.http.post<any>(`${ environment.apiUrl }/email/send`, value));
     }
 }

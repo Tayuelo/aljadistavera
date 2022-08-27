@@ -11,6 +11,7 @@ import { MailService } from 'src/app/services/email.service';
 export class ContactPageComponent implements OnInit {
 
   public contactForm: FormGroup;
+  public loading = false;
 
   constructor(private mailService: MailService) {
     this.contactForm = new FormGroup({
@@ -23,7 +24,10 @@ export class ContactPageComponent implements OnInit {
   ngOnInit(): void { }
 
   sayHello() {
-    //this.mailService.send(this.contactForm.value);
-    this.contactForm.reset();
+    this.loading = true;
+    this.mailService.send(this.contactForm.value).then(() => {
+      this.loading = false;
+      this.contactForm.reset();
+    });
   }
 }

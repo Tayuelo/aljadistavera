@@ -9,7 +9,7 @@ export class FeatureService {
 
   getFeatures(): Promise<any> {
     return firstValueFrom(
-      this.http.get<any>(`${ environment.apiUrl }/api/features`)
+      this.http.get<any>(`${ environment.apiUrl }/features`)
     );
   }
 }

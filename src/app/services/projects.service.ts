@@ -9,7 +9,7 @@ export class ProjectsService {
 
   getProjects(): Promise<any> {
     return firstValueFrom(
-      this.http.get<any>(`${ environment.apiUrl }/api/projects` )
+      this.http.get<any>(`${ environment.apiUrl }/projects` )
     );
   }
 }
